@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-todos:list[];
+todoss:list[];
   constructor() { 
   
- this.todos =[
-{
-  sno:1,
-  title:"listing",
-  desc:"fanccccccccccccccccc"
+    this.todoss =[
+    {
+      sno:1,
+      title:"listing",
+      desc:"fanccccccccccccccccc"
 
 },
 {

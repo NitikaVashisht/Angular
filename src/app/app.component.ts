@@ -8,12 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-first-project';
+  tittle = 'my-first-project-nitika';
+ firstName='';
+
 constructor(){
   setTimeout(() => {
-this.title="change tittle";
-  },2000);
+this.tittle="change tittle";
+  },5000);
+  this.firstName='val.string';
   }
+ 
 }
 
 
