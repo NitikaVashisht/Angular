@@ -18,6 +18,13 @@ this.tittle="change tittle";
   this.firstName='val.string';
   }
  
+  custommethod(){
+    return("This is custom method"  +  this.tittle);
+  }
+  appstatus:boolean= false;
+  Status1="Online" ;
+  Status2= "Offline";
+
 }
 
 
