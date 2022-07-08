@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class MessageServiceService {
 
- 
+
   constructor() { }
-  messageAlert(){
+  messageAlert() {
     alert("This is Alert Messagesssssss.");
   }
 
-  product="laptop"
+  product = "laptop"
 }

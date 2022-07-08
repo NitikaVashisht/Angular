@@ -33,6 +33,22 @@ todoss:list[];
 
   }
 
+mypro:boolean=true;
+mystyle1:string="15px"
+mystyle2:string="5px"
+isActive:boolean=false;
+
+// object for property wih array
+multiclasses ={
+class1:true,
+class2:true,
+class3:true
+}
+
+multistyle ={
+  'background': 'black',
+     'border': '1px solid #fff', 'padding': '10px', 'color':'#fff'
+}
   ngOnInit(): void {
   }
 

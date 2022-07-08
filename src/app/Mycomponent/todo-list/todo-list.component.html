@@ -6,7 +6,29 @@
 
 <div class="container">
 <div class="row">
-<div class="col-md-6">
+    
+    <!-- Class Binding and style binding only 1 property bind -->
+
+<p class="box" [class.myclass]=true>This is class Binding</p>
+
+<p class="box" [class.myclass]="mypro">This is class Binding</p>
+
+<p class="box" [style.margin]="mystyle1">This is class Binding</p>
+
+<p class="box" [style.margin]="isActive ? mystyle1 : '5px'"> class Binding with Ternary</p>
+<p class="box" [style.margin]="isActive ? mystyle1 : mystyle2"> class Binding with Ternary</p>
+
+ <!-- Class Binding and style binding ( multiple class bind using directive) -->
+ <p class="box" [ngClass]= "'class1 class2 class3'"> Multiple class bind using directive</p>
+
+ <!-- Class Binding and style binding ( multiple class bind using directive) -->
+ <p class="box" [ngClass]= "multiclasses"> Multiple class bind using directive</p>
+
+<p class="box" [ngStyle]="{ 
+    'background': 'black',
+     'border': '1px solid #fff', 'padding': '10px', 'color':'#fff' }">Style Binding</p>
+
+     <p class="box" [ngStyle]= "multistyle">Style Binding with property</p>
 <app-card1></app-card1>
     
 </div>
@@ -18,4 +40,3 @@
 
 
 
-</div>
