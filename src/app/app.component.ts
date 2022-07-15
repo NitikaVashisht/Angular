@@ -21,8 +21,15 @@ export class AppComponent {
 
   }
   onServer() {
+    // this is used to call property
     this.eventBindind = "Something is created";
   }
+  
+  onCart(){
+    this.cartInfo = "Added tour cart";
+  }
+
+  cartInfo:string = "";
   custommethod() {
     return ("This is custom method" + this.tittle);
   }
@@ -36,6 +43,36 @@ export class AppComponent {
 
   eventBindind = "Nothing is created"
 
+  onClick(event: any){
+    console.log(event.target.value);
+  }
+  
+  onPhone(event: any){
+    this.phoneclicked = (event.target.value  +  " is clicked");
+  }
+  // onLaptop(){
+  //   this.plaptopclicked = "laptop is clicked";
+  // }
+  phoneclicked:string = "";
+  plaptopclicked:string = "";
+
+  onCart1(inputinfo:any){
+    console.log(inputinfo.value);
+    console.log(inputinfo.value)
+     }
+
+
+
+    //  onCart1(my:any){
+    //   console.log(my.value);
+    //   console.log(my.name)
+    //    }
+
+    dataBinding:string= "Two Way Binding";
+
+
+    option:boolean = false;
+    onOption(){
+      this.option= true;
+    }
 }
-
-

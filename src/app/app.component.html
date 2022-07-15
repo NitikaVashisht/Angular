@@ -33,11 +33,44 @@
     <br><br>
     <!-- Event binding -->
     <button class="btn btn-primary" [disabled]="allowme" (click)="onServer()">Button Click</button>
-
+    <button class="btn btn-secondary" (click)="onCart()">Add to Cart</button>
+    <p>{{cartInfo}}</p>
     <p>{{eventBindind}}</p>
 
+   <input type="text" value="textbox1" (click)="onClick($event)">
+   <br>
+   <br>
+<button value="phone" (click)="onPhone($event)">phone</button>&nbsp;
+<button value="laptop" (click)="onPhone($event)">laptop</button>
+
+
+<p>{{phoneclicked}}</p>
+<p>{{plaptopclicked}}</p>
+
+
+<!-- Template reference variable- works like ID -->
+<input #inputinfo type="text" value="Reference" name="textvariable">
+<button (click)="onCart1(inputinfo)">Value</button>
+<br><br>
+<!-- two way binding (for this Formsmodule have to import in app.module.ts and import below) -->
+
+<input value="data" type="text" [(ngModel)]= "dataBinding">
+<p>{{dataBinding}}</p>
 
   </div></div>
+
+  <!-- if, else ,then Directives -->
+
+  <button class="btn-primary btn" (click)="onOption()" >Create Button</button>
+
+
+<p *ngIf="option; then thenBlock; else elseBlock"></p>
+<ng-template #thenBlock>
+  <p> Data is here</p>
+</ng-template>
+<ng-template #elseBlock>
+  <p>Nothing is created</p>
+</ng-template>
 
 </div>
 
