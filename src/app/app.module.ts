@@ -12,11 +12,23 @@ import { MessageServiceService } from './message-service.service';
 import { SampleserviceService } from './sampleservice.service';
 import { HomeComponent } from './Mycomponent/home/home.component';
 import { AboutComponent } from './Mycomponent/about/about.component';
+import { ProductComponent } from './Mycomponent/product/product.component';
+import { LaptopComponent } from './Mycomponent/product/laptop/laptop.component';
+import { MobileComponent } from './Mycomponent/product/mobile/mobile.component';
+import { ParentComponent } from './Mycomponent/parent/parent.component';
 
 
 const appRoutes: Routes=[
   {path:'', component: HomeComponent},
-  {path:'about', component: AboutComponent}
+  {path:'about', component: AboutComponent},
+  
+    {path:'buy-product', component: ParentComponent},
+
+  {path:'product',component: ProductComponent, children:[
+    // {path:'', component: ProductComponent},
+    {path:'laptop', component: LaptopComponent},
+    {path:'mobile', component: MobileComponent}
+  ]}
 ]
 
 
@@ -27,7 +39,11 @@ const appRoutes: Routes=[
     Card1Component,
     Card2Component,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ProductComponent,
+    LaptopComponent,
+    MobileComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,

@@ -86,11 +86,19 @@ export class AppComponent {
 
 
 
-  userArray= [];
-  // onCreate(inputValue1:any){
-  //   //  console.log(inputValue1.value) ;
-  //   this.userArray.push({
-  //   name.inputValue1.value
-  //   })
-  //     }
+  users= [{name:''}];
+  onCreate(inputValue:any){
+    //  console.log(inputValue1.value) ;
+    this.users.push({
+    name:inputValue.value
+    });
+      }
+
+      onRemoveUser(){
+        this.users.splice(this.users.length -1)
+      }
+
+      onRemove(i:any){
+this.users.splice(i, 1)
+      }
 }
