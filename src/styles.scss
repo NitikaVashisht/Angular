@@ -11,3 +11,133 @@ h3{
     text-align: center;
     margin-bottom: 15px!important;
 }
+.navbar-collapse {
+    flex-grow: 0!important; 
+ 
+}
+.banner {
+    text-transform: uppercase;
+    h1 {
+        margin-bottom: 0;
+        margin-top: 10px;
+        color: #222;
+    }
+    h4 {
+    font-weight: 700;
+    letter-spacing: .4em;
+    color: #777;
+    margin-bottom: 0;
+}
+.btn-solid {
+    padding: 13px 29px;
+    color: #fff;
+    letter-spacing: .05em;
+    border: 2px solid #ff4c3b;
+    border: 2px solid var(--theme-deafult);
+    background: #ff4c3b;
+    background-image: linear-gradient(30deg,#ff4c3b 50%,transparent 0);
+    background-image: linear-gradient(30deg,var(--theme-deafult) 50%,transparent 0);
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background .3s ease-in-out;
+    margin-top: 15px;
+}
+.carousel-caption {
+    position: absolute;
+    right: auto;
+    bottom: 1.25rem;
+    left: 155px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    top:108px;
+}
+
+}
+
+.section-t-space, section {
+    padding-top: 70px;
+}
+a, a:hover {
+    transition: .5s ease;
+}
+.collection-banner {
+    position: relative;
+    overflow: hidden;
+}
+.text-center {
+    text-align: center!important;
+}
+.collection-banner .img-part {
+    transition: all .5s ease;
+}
+.collection-banner .img-part img {
+    width: 100%;
+}
+.img-fluid, .img-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+.collection-banner.p-right .contain-banner {
+    justify-content: flex-end;
+}
+.collection-banner .contain-banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.collection-banner .contain-banner h4 {
+    color: #ff4c3b;
+    color: var(--theme-deafult);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 0;
+}
+.collection-banner .contain-banner h2 {
+    font-size: 55px;
+    letter-spacing: .01em;
+}
+.title1 h4 {
+    color: #ff4c3b;
+    color: var(--theme-deafult);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    margin-top: -3px;
+}
+.title1 {
+    text-align: center;
+}
+.section-t-space, section {
+    padding-top: 70px;
+}
+.title1 .title-inner1:after {
+    position: absolute;
+    height: 5px;
+    width: 70px;
+    background-color: #ff4c3b;
+    background-color: var(--theme-deafult);
+    content: "";
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+}
+.product-para p {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    line-height: 24px;
+    letter-spacing: .05em;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: auto!important;
+    right: 6px;
+}

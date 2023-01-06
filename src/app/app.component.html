@@ -1,158 +1,5 @@
-<div class="container">
-  <div class="row">
-
-    <div class="col-6">
-      <h1>Hello</h1>
-      <div ng-app="" ng-init="firstName=''">
-
-        <p>Input something in the input box:</p>
-        <p>Name: <input type="text" ng-model="firstName"></p>
-        <p>You wrote: {{ firstName }}</p>
-        <p>You wrote: {{ tittle }}</p>
-        <!-- expression -->
-        <h3>expression</h3>
-        {{6+10}}
-
-        <!-- Template reference variable- works like ID -->
-        <h3>Template reference variable- works like ID</h3>
-        <input #inputinfo type="text" value="Reference" name="textvariable">
-        <button (click)="onCart1(inputinfo)">Value</button>
-        <br><br>
-        <!-- two way binding (for this Formsmodule have to import in app.module.ts and import below) -->
-        <h3>two way binding</h3>
-        <input value="data" type="text" [(ngModel)]="dataBinding">
-        <p>{{dataBinding}}</p>
-      </div>
-    </div>
-    <div class="col-6">
-      <h3>concatenation</h3>
-      <h2>
-        <!-- concatenation -->
-        {{"welcome" + "Nitika" + 10 + 2}}
-        <!-- method string Interpolation -->
-      </h2>
-
-      <h3>Ternary String</h3>
-      {{custommethod()}}
-      <br>
-      <!-- Ternary String using here -->
-      My status is {{appstatus ? "Online" : "Offline"}}
-      <!-- Ternary String property using here -->
-      My status is {{appstatus ? Status1 : Status2}}
-      <br>
-      <br>
-      <!-- property binding -->
-      <h3>property binding</h3>
-      <input type="text" [disabled]="enable" id="" name="" [value]="appstatus ? Status1 : Status2">
-      <br><br>
-      <input type="text" [hidden]="!enable" id="" name="" bind-value="propertyBinding">
-      <br><br>
-      <!-- Event binding -->
-      <h3>Event binding</h3>
-      <button class="btn btn-primary" [disabled]="allowme" (click)="onServer()">Button Click</button>
-      <button class="btn btn-secondary" (click)="onCart()">Add to Cart</button>
-      <p>{{cartInfo}}</p>
-      <p>{{eventBindind}}</p>
-
-      <input type="text" value="textbox1" (click)="onClick($event)">
-      <br>
-      <br>
-      <button value="phone" (click)="onPhone($event)">phone</button>&nbsp;
-      <button value="laptop" (click)="onPhone($event)">laptop</button>
 
 
-      <p>{{phoneclicked}}</p>
-      <p>{{plaptopclicked}}</p>
-
-
-
-
-    </div>
-
-
-    <!-- if, else ,then Directives -->
-    <h3>if, else ,then Directives</h3>
-    <button class="btn-primary btn" (click)="onOption()">Create Button</button>
-
-
-    <p *ngIf="option; then thenBlock; else elseBlock"></p>
-    <ng-template #thenBlock>
-      <p> Data is here</p>
-    </ng-template>
-    <ng-template #elseBlock>
-      <p>Nothing is created</p>
-    </ng-template>
-
-
-    <!-- ngfor -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <h3>ngfor</h3>
-          <table>
-            <tr>
-
-              <th>Phone</th>
-              <th>Laptop</th>
-              <th>TV</th>
-              <th>Tab</th>
-            </tr>
-            <tr *ngFor="let pro of product; index as i">
-              <td># {{i}}</td>
-              <td><img src="{{pro.proimg}}" width="70"></td>
-              <td>{{pro.name}}</td>
-              <td>{{pro.price}}</td>
-              <td>{{pro.id}}</td>
-            </tr>
-
-          </table>
-
-
-
-
-
-        </div>
-      </div>
-      <div class="pushng">
-        <h3>push/splice ngfor</h3>
-        <div class="row">
-
-
-          <div class="col-4"><input type="text"  name="" #inputValue type="text" class="form-control" placeholder="user"></div>
-          <div class="col-4"><button class="btn-secondary" (click)="onCreate(inputValue)">Create User</button></div>
-          <div class="col-4"><button class="btn-secondary" (click)="onRemoveUser()">Remove</button></div>
-          <div class="col-4">
-            <table>
-              <thead class="thead-dark">
-                <tr>
-                  <th>Username</th>
-                  <td>Remove</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let user of users; index as i">
-                  <td>
-                    {{user.name}}
-                  </td>
-
-                  <td>
-                    <button class="btn-danger" (click)="onRemove(i)">Remove Usera</button>
-                  </td>
-
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-      <app-todo-list></app-todo-list>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -161,8 +8,8 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent float-end">
+            <ul class="navbar-nav mb-2 mb-lg-0 float-end">
               <li class="nav-item">
                 <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
                   routerLink="/">Home</a>
@@ -190,32 +37,34 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
+        
             </ul>
-
+<!-- 
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> -->
           </div>
         </div>
-      </nav>
+      </nav>  
       <router-outlet></router-outlet>
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  
+
+      <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../assets/images/1.jpg" class="d-block w-100" alt="...">
+            <img src="../assets/images/banner-1.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="../assets/images/2.jpg" class="d-block w-100" alt="...">
+            <img src="../assets/images/banner-2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <img src="../assets/images/1.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
-      </div>
+      </div> -->
+
+ 
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -279,5 +128,5 @@
         </div>
       </div>
 
-    </div>
-  </div>
+ 
+<app-studentlist></app-studentlist>

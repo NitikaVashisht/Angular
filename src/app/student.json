@@ -1,0 +1,27 @@
+
+[
+    {
+    "name":"Nitika",
+    "id":1,
+    "email":"nitika@tietoevry.com",
+    "gender":"female"
+},
+{
+    "name":"Nits",
+    "id":2,
+    "email":"nits@tietoevry.com",
+    "gender":"female"
+},
+{
+    "name":"Mitu",
+    "id":3,
+    "email":"mitu@tietoevry.com",
+    "gender":"male"
+},
+{
+    "name":"Ritika",
+    "id":4,
+    "email":"ritika@tietoevry.com",
+    "gender":"female"
+}
+]

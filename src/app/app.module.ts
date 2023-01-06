@@ -16,6 +16,9 @@ import { ProductComponent } from './Mycomponent/product/product.component';
 import { LaptopComponent } from './Mycomponent/product/laptop/laptop.component';
 import { MobileComponent } from './Mycomponent/product/mobile/mobile.component';
 import { ParentComponent } from './Mycomponent/parent/parent.component';
+import { SpecialOfferComponent } from './Mycomponent/home/special-offer/special-offer.component';
+import { StudentlistComponent } from './studentlist/studentlist.component';
+import { MessageAlertService } from './Myservices/message-alert.service';
 
 
 const appRoutes: Routes=[
@@ -43,7 +46,9 @@ const appRoutes: Routes=[
     ProductComponent,
     LaptopComponent,
     MobileComponent,
-    ParentComponent
+    ParentComponent,
+    SpecialOfferComponent,
+    StudentlistComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,7 @@ const appRoutes: Routes=[
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [MessageServiceService,SampleserviceService],
+  providers: [MessageServiceService,SampleserviceService,MessageAlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

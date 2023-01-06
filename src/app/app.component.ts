@@ -81,6 +81,8 @@ export class AppComponent {
     { proimg: 'https://i.postimg.cc/4NysmMvz/8b56ffb305d960f5-800x800ar.png', name: 'laptop2', price: '3000', id: '3', },
     { proimg: 'https://i.postimg.cc/WpBc133P/winter-blue-pink-gradient-background-vector-53876-117276.webp', name: 'laptop3', price: '4000', id: '4', }
   ]
+  // list=[{name: 'Nits','red'}]
+
 
 
 
